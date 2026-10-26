@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-label="Code Lib Logo">
+  <!-- Background Container -->
+  <rect width="32" height="32" rx="8" fill="#1e262c" stroke="#34424c" stroke-width="1" />
+  
+  <!-- Book Spine / Stack Accent Line -->
+  <path d="M7 9h2v14H7z" fill="#00d66c" />
+  
+  <!-- Code Brackets / Lib Symbol -->
+  <path d="M14 11l-4 5 4 5" fill="none" stroke="#f0f4f8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M18 11l4 5-4 5" fill="none" stroke="#f0f4f8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Slash Divider -->
+  <line x1="17" y1="10" x2="15" y2="22" stroke="#00d66c" stroke-width="2" stroke-linecap="round" />
+</svg>
