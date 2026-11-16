@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Title</title>
+    <title>Search - CodeLIB</title>
+    <link rel="icon" href="Assets/header-svg.svg" type="image/svg+xml">
     <!-- Stylesheet Link -->
     <link rel="stylesheet" href="style.css">
+    <!-- Shared by every page: layout (#18), header (#16), footer (#17) -->
+    <link rel="stylesheet" href="Styles/template.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <!-- This page -->
+    <link rel="stylesheet" href="Styles/entries.css">
+    <link rel="stylesheet" href="Styles/search.css">
 </head>
 <body>
-    <header>
-        <nav aria-current="page">
-            <ul>
-                <li><a href="index.html"><img src="Assets/header-svg.svg" alt="Home"></a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a href="my-entries.html">My Entries</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="login.html">Account</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="site-header"></div>
 
     <!-- Main Content -->
-    <h1>Hello, world!</h1>
+    <main id="main" class="container">
+        <h1>Search entries</h1>
+        <form action="search.html" method="get">
+            <div class="form-group">
+                <label for="q">Keywords</label>
+                <input id="q" type="search" name="q">
+            </div>
+            <div class="form-group">
+                <label for="language">Language</label>
+                <select id="language" name="language"><option value="">Any language</option></select>
+            </div>
+            <fieldset>
+                <legend>Tags (entries must have all selected)</legend>
+                <div id="tag-options" class="tag-options"></div>
+            </fieldset>
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+        <h2 id="result-count" aria-live="polite"></h2>
+        <div id="results" class="grid"></div>
+    </main>
 
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2026 CodeLIB. All rights reserved.</p>
-    </footer>
+    <div id="site-footer"></div>
 
-    <!-- JavaScript File -->
+    <!-- JavaScript Files: header.js (#16) and footer.js (#17) build the shared header and footer -->
+    <script src="Scripts/header.js"></script>
+    <script src="Scripts/footer.js"></script>
+    <!-- This page -->
+    <script src="Scripts/entries.js"></script>
+    <script src="Scripts/search.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
